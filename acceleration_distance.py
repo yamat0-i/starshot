@@ -12,7 +12,7 @@ c = 3e8 # Light speed [m/s]
 rho = 5060 # MoS2 [kg/m^3]
 thickness = 59e-9 # Sail thickness [m]
 A = 10 # Sail area [m^2]
-radius = 490e-9 # Holl radius [m]
+radius = 490e-9 # Hole radius [m]
 ratio = 2 # x = ratio * diameter
 ms = mass.phc_holl(rho, thickness, A, radius, ratio) # Sail mass [kg]
 
