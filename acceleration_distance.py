@@ -1,7 +1,7 @@
 import numpy as np
 from scipy import integrate
 
-import calc_gamma as g
+import lorentz as l
 import doppler as d
 
 
@@ -52,7 +52,7 @@ v_f = 0.2 * c
 dv = (v_f - v_0) / len(lam)
 
 def calc_momentum(mt, reflectance, v, c):
-    gamma = g.calc_gamma(v, c)
+    gamma = l.loretzfactor(v, c)
     return (mt / reflectance) * (gamma * v / (1 - v/c)**2)
 
 # integrate

@@ -1,12 +1,12 @@
 import numpy as np
 
-import calc_gamma as g
+import lorentz as l
 
 c = 3e8
 
 def doppler_shift(lam, v, c):
     nu = lam2nu(lam)
-    gamma = g.calc_gamma(v, c)
+    gamma = l.loretzfactor(v, c)
     nu_shift =  nu / (np.sqrt(gamma) * (1 + v/c))
     lam_shift = nu2lam(nu_shift)
     return lam_shift
