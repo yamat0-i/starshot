@@ -14,7 +14,7 @@ thickness = 59e-9 # Sail thickness [m]
 A = 10 # Sail area [m^2]
 radius = 490e-9 # Hole radius [m]
 ratio = 2 # x = ratio * diameter
-ms = mass.phc_holl(rho, thickness, A, radius, ratio) # Sail mass [kg]
+ms = mass.phc_hole(rho, thickness, A, radius, ratio) # Sail mass [kg]
 
 mp = 0.1e-3 # Payload mass [kg]
 mt = ms + mp # Total mass [kg]

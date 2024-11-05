@@ -4,7 +4,7 @@ def slab(rho, thickness, A):
     ms = rho * thickness * A
     return ms
 
-def phc_holl(rho, thickness, A, radius, ratio):
+def phc_hole(rho, thickness, A, radius, ratio):
     # unit cell size
     x_unit = ratio * 2 * radius
     y_unit = np.sqrt(3) * x_unit
@@ -19,5 +19,5 @@ if __name__ == '__main__':
     thickness = 59e-9 # Sail thickness [m]
     A = 10 # Sail area [m^2]
     hole_radius = 490e-9 
-    print(phc_holl(rho, thickness, A, hole_radius))
+    print(phc_hole(rho, thickness, A, hole_radius))
 
