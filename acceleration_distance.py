@@ -49,16 +49,16 @@ v_0 = 0
 v_f = 0.2 * c
 dv = (v_f - v_0) / len(lam)
 
-def calc_momentum(mt, reflectance, v, c):
+def calc_momentum(mt, R, v, c):
     gamma = l.loretzfactor(v, c)
-    return (mt / reflectance) * (gamma * v / (1 - v/c)**2)
+    return (mt / R) * (gamma * v / (1 - v/c)**2)
 
 # integrate
 s = 0
 for i in range(1, len(lam)):
     v1 = v_0 + dv * i
-    reflectance = calc_r_shift(v1)
-    f1 = calc_momentum(mt=mt, reflectance=reflectance, v=v1, c=c)
+    R_shift = calc_r_shift(v1)
+    f1 = calc_momentum(mt, R_shift, v1, c)
     s += dv * f1
 
 coef = c / (2 * I * A) # 1/force
